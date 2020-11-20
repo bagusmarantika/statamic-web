@@ -1,0 +1,20 @@
+.box-news {
+    background-color: white;
+    box-shadow: 0px 5px 40px 0px rgba(80,101,142,0.08);
+    border-radius: 4px;
+    height: 100%;
+}
+
+.box-news-line {
+    border-bottom: 6px solid #0c84b4;
+}
+
+.box-news-content{
+    padding: 10px;
+}
+
+@media (min-width: 576px){
+    .box-news-content {
+        padding: 7px;
+    }
+}

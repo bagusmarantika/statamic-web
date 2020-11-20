@@ -1,0 +1,62 @@
+<header class="header_menu">
+    <div class="header_bg_menu"></div>
+</header>
+<section>
+    <div class="container">
+        <div class="section-content">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="text-block">
+                        <h5 class="subtitle" style="color: #0c84b4;">{{ title_about }}</h5>
+                        <h2 class="title">{{ title_content }}</h2>
+                        <p class="content">{{ content_about1 }}</p>
+                        <p>{{ content_about2 }}</p>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="accordion" id="accordionAbout">
+                        <div class="card">
+                            <div class="card-header" id="headerAccordion">
+                                <h4 class="mb-0">
+                                    {{ title_accordion }}
+                                </h4>
+                            </div>
+                        </div>
+                        {{ list_accordion }}
+                        <div class="card">
+                            <div class="card-header" id="heading{{index}}">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{index}}" aria-expanded="true" aria-controls="collapse{{index}}">
+                                        {{ title_item }}
+                                    </button>                                    
+                                </h5>
+                            </div>
+                            <div class="collapse" id="collapse{{index}}" aria-labelledby="heading{{index}}" data-parent="#accordionAbout">
+                                <div class="card-body">
+                                    {{ content_item }}
+                                </div>
+                            </div>
+                        </div>
+                        {{ /list_accordion }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-content">
+            <div class="row">
+                {{ list_accordion }}
+                    <div class="col-sm-10 col-md-8 col-lg-4">
+                        {{ partial:card-news
+                            :img-news="img_item"
+                            :title-news="title_item"
+                            :content-news="content_item"
+                        }}
+                    </div>
+                {{ /list_accordion }}
+            </div>
+        </div>
+    </div>
+</section>
+<section class="card-content">
+    <div> <h5> apa aja ya </h5> </div>
+</section>

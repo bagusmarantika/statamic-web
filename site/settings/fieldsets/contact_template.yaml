@@ -1,0 +1,24 @@
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        display: Title
+        type: text
+      title_page:
+        type: text
+        display: Title_Page
+      subtitle:
+        type: text
+        display: Subtitle
+      content:
+        type: text
+        display: Content
+      number:
+        type: text
+        display: Number
+      titile_form:
+        type: text
+        display: Titile_Form
+taxonomies: true
+title: Contact_Template

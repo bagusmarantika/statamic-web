@@ -1,0 +1,65 @@
+<style>
+    .img-content {
+        max-width: 100%;
+        max-height: auto;
+    }
+
+    .protect-content{
+        padding-top: 100px;
+    }
+
+    .img-protect{
+        max-width: 500px;
+        max-height: auto;
+    }
+
+    .check-list li {
+        position: relative;
+        padding: .5rem 0 .5rem .3rem;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+</style>
+<header class="header_menu">
+    <div class="header_bg_menu"></div>
+</header>
+<section>
+    <div class="container">
+        <div class="section-content">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-block">
+                        <h5 class="subtitle" style="color: #0c84b4;">{{ title_page }}</h5>
+                        <h2 class="title">{{ subtitle }}</h2>
+                        <p class="content">{{ content }}</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    {{ assets:image_content }}
+                        <img class="img-content" src="{{ url }}" alt="">
+                    {{ /assets:image_content }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="protect-content">
+    <div class="container">
+        <div class="section-content">
+            <div class="row">
+                <div class="col-lg-6">
+                    {{ assets:image_protect }}
+                        <img class="img-protect" src="{{ url }}" alt="">
+                    {{ /assets:image_protect }}
+                </div>
+                <div class="col-lg-6">
+                    <h5 class="subtitle" style="color: #0c84b4;">{{ title_protect }}</h5>
+                    <h2 class="title">{{ subtitle_protect }}</h2>
+                    <p class="content">{{ stepstep_protect }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,140 @@
+{{# This partial creates a Bootstrap 4 menubar #}}
+
+<style>
+    .Union_1 {
+       width: 42px;
+       height: 42px;
+       transform: matrix(1,0,0,1,0,0);
+    }
+
+    nav{
+        z-index: 999;
+    }
+    
+    .navbar .navbar-nav .nav-item.active > a, .navbar .navbar-nav .nav-item:hover > a {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .navbar .navbar-nav .nav-item a {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 700;
+        padding: 11px 14px;
+        color: #fff;
+        text-transform: uppercase;
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0);
+        border-radius: 5px;
+        -webkit-transition: all 0.3s ease-out 0s;
+        -moz-transition: all 0.3s ease-out 0s;
+        -ms-transition: all 0.3s ease-out 0s;
+        -o-transition: all 0.3s ease-out 0s;
+        transition: all 0.3s ease-out 0s;
+        margin: 14px 4px;
+    }
+
+    .navbar .navbar-btn ul li a.light {
+        border-color: #fff;
+    }
+
+    .navbar .navbar-btn ul li a.light:hover {
+        background-color:#0c84b4;
+        border-color: #fff;
+
+    }
+
+    .navbar .navbar-btn ul li a {
+        padding: 10px 16px;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #fff;
+        border: 2px solid;
+        border-radius: 4px;
+        -webkit-transition: all 0.3s ease-out 0s;
+        -moz-transition: all 0.3s ease-out 0s;
+        -ms-transition: all 0.3s ease-out 0s;
+        -o-transition: all 0.3s ease-out 0s;
+        transition: all 0.3s ease-out 0s;
+        text-decoration: none;
+    }
+
+    ul {
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;
+    }
+</style>
+
+<div class="navbar-area navbar-one navbar-transparent">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+
+                    {{# Place your logo-image or brandname in here #}}
+                    <a class="navbar-brand" href="#">
+                        <!-- <svg class="Union_1" viewBox="0 0 42 42">
+                            <path fill="rgba(255, 255, 255, 1)" id="Union_1" d="M 14.17500019073486 42 L 14.17500019073486 27.82500076293945 L 0 27.82500076293945 L 0 14.17500019073486 L 14.17500019073486 14.17500019073486 L 14.17500019073486 0 L 27.82500076293945 0 L 27.82500076293945 14.17500019073486 L 42 14.17500019073486 L 42 27.82500076293945 L 27.82500076293945 27.82500076293945 L 27.82500076293945 42 L 14.17500019073486 42 Z">
+                            </path>
+                        </svg> -->
+                       
+                        <span><b><i class="fa fa-binoculars" aria-hidden="true"></i> Pantau</b>Covid-19</span>
+                    </a>
+                    
+                    <button class="navbar-toggler"
+                            type="button" 
+                            data-toggle="collapse" 
+                            data-target="#navbarNavDropdown" 
+                            aria-controls="navbarNavDropdown" 
+                            aria-expanded="false" 
+                            aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>    
+                
+                    <div class="collapse navbar-collapse sub-menu-bar" id="navbarNavDropdown">
+                        <ul class="navbar-nav m-auto">
+                
+                            {{ nav from="/" include_home="true" max_depth="2" scope="tag"  }}
+                            
+                            <li class="nav-item {{ if is_current}} active {{ /if }} {{ if children }} dropdown {{ /if }} ">
+                              
+                                {{ if children }}
+                                    <a  class="nav-link dropdown-toggle" 
+                                        href="#" 
+                                        id="navbarDropdown" 
+                                        role="button" 
+                                        data-toggle="dropdown" 
+                                        aria-haspopup="true" 
+                                        aria-expanded="false">
+                                        {{ tag:nav_title or title }}
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        {{ children }}
+                                            <a class="dropdown-item" href="{{ url }}">{{ tag:nav_title or title }}</a>
+                                        {{ /children }}
+                                    </div>
+                                {{ else }}
+                                <a class="nav-link {{ if is_current or is_parent }}active{{ /if }}" href="{{ url }}">{{ tag:nav_title or title }}</a>
+                                {{ /if }}
+                            </li>
+                            {{ /nav }}         
+                
+                        </ul>
+                    </div>
+                    <div class="navbar-btn d-none d-sm-inline-block">
+                        <ul>
+                            <li>
+                                <a class="light" href="#">Donate <i class='fas fa-heart'></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    
+    

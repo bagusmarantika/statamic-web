@@ -1,0 +1,132 @@
+<style>
+    .footer {
+        position: relative;
+        top:420px;
+        background-color: #f4f6f7;
+        border-top: 5px solid #0c84b4;
+        padding-top: 25px;
+    }
+
+    .about-footer {
+        padding-right: 50px;
+    }
+
+    .text-about {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .color {
+        color: #0c84b4;
+        padding: 0 5px;
+    }
+
+    a {
+        color: black;
+    }
+
+    a:link, a:visited {
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #0c84b4;
+    }
+
+    .link-footer li {
+        padding: 5px 0;
+    }
+
+    .copyright {
+        background-color: #0c84b4;
+        color: #fff;
+        padding: 10px 0;
+        height: 50px;
+    }
+
+    .btn-primary {
+        background-color: #0c84b4;
+        border-color: #0c84b4;
+    }
+
+    .btn-primary:hover {
+        background-color:transparent;
+        color: #0c84b4;
+        border-color: #0c84b4;
+    }
+
+    .prl {
+        padding: 0 30px;
+    }
+</style>
+
+<footer class="footer">
+    <div class="container prl">
+        <div class="row">
+            <div class="col-lg-5 about-footer">
+                <div class="text-block text-about">
+                    <h4>About</h4>
+                    <p>{{ footer_content:about }}</p>
+                </div>
+                <div class="text-block mt-4">
+                    <h4 class="mb-3">Follow Us</h4>
+                    {{ footer_content:social_media_list }}
+                        <a href="{{ link }}"><i class="color fab fa-{{ name }} fa-2x"></i></a>
+                    {{ /footer_content:social_media_list }}
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="text-block">
+                    <h4>Important Link</h4>
+                    <ul class="link-footer">
+                        <li>
+                            <a href="#">WHO website <i class="color fas fa-arrow-right"></i></a>
+                        </li>
+                        <li>
+                            <a href="#">WHO website <i class="color fas fa-arrow-right"></i></a>
+                        </li>
+                        <li>
+                            <a href="#">WHO website <i class="color fas fa-arrow-right"></i></a>
+                        </li>
+                        <li>
+                            <a href="#">WHO website <i class="color fas fa-arrow-right"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-block mt-4">
+                    <h4>Quick Link</h4>
+                    <ul class="link-footer">
+                        <li>
+                            <a href="#">Home <i class="color fas fa-arrow-right"></i></a>
+                        </li>
+                        <li>
+                            <a href="#">About <i class="color fas fa-arrow-right"></i></a>
+                        </li>
+                        <li>
+                            <a href="#">Prevention <i class="color fas fa-arrow-right"></i></a>
+                        </li>
+                        <li>
+                            <a href="#">Contact <i class="color fas fa-arrow-right"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="text-block">
+                    <h4>Want more Information?</h4>
+                    <p>Please subscribe to get more information about the Coronavirus.</p>
+                    <input class="form-control" type="email" placeholder="Enter your Email...">
+                    <button type="submit" class="btn btn-primary mt-2">Subcribe</button>
+                </div>
+                <div class="text-block mt-4">
+                    <a href="#">Term & Conditions </a>|<a href="#"> Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-block mt-4 copyright">
+        <div class="text-center">
+            <p>© {{ now|format:Y }} {{ footer_content:owner }}. {{ footer_content:copyright }}</p>
+        </div>
+    </div>
+</footer>

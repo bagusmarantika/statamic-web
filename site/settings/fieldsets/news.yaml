@@ -1,0 +1,25 @@
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        display: Title_News
+        type: text
+      subtitle_news:
+        type: text
+        display: Subtitle_News
+      thumbnail_news:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: Thumbnail_News
+      content_news:
+        restrict_assets: false
+        type: redactor
+        display: Content_News
+      button_news:
+        type: text
+        display: Button_News
+taxonomies: true
+title: News

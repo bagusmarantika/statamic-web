@@ -1,0 +1,44 @@
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        display: Title
+        type: text
+      title_page:
+        type: text
+        display: Title_Page
+      subtitle:
+        type: text
+        display: Subtitle
+      content:
+        restrict_assets: false
+        type: redactor
+        display: Content
+      image_content:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: Image_Content
+  protect:
+    display: Protect
+    fields:
+      title_protect:
+        type: text
+        display: Title_Protect
+      subtitle_protect:
+        type: text
+        display: Subtitle_Protect
+      stepstep_protect:
+        restrict_assets: false
+        type: redactor
+        display: Stepstep_Protect
+      image_protect:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: Image_Protect
+taxonomies: true
+title: Prevention_template

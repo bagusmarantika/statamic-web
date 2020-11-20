@@ -1,0 +1,62 @@
+<header class="header_menu">
+    <div class="header_bg_menu"></div>
+</header>
+<section>
+    <div class="container">
+        <div class="row">
+            {{if thumbnail_news }}
+                {{ assets:thumbnail_news }}
+                    <img src="{{url}}" alt=".." width="100%">
+                {{ /assets:thumbnail_news }}
+            {{else}}
+                <img src="https://dummyimage.com/350x200/aaaaaa/0c84b4" alt=".." width="100%">
+            {{/if}}
+
+            <div class="text-block">
+                <h4 class="title">{{ title }}</h4>
+                <p>{{ content_news }}</p>
+            </div>
+        </div>
+        <div class="row">
+            {{ collection:collection-news limit="2" paginate="true" as="posts" }}
+
+                {{ if no_results }}
+                    <p>Aww, there are no results.</p>
+                {{ /if }}
+
+                {{ posts }}
+                <div class="col-lg-4">
+                <div class="box-news">
+                    <div class="box-news-line">
+                        {{if thumbnail_news }}
+                            {{ assets:thumbnail_news }}
+                                <img src="{{url}}" alt=".." width="100%">
+                            {{ /assets:thumbnail_news }}
+                        {{else}}
+                            <img src="https://dummyimage.com/350x200/aaaaaa/0c84b4" alt=".." width="100%">
+                        {{/if}}
+                    </div>
+                    <div class="box-news-content">
+                        <h4 class="title">{{ title }}</h4>
+                        <p>{{ content_news | truncate:159:... }}</p>
+                        <div class="button button-blue">
+                            <a href="{{ url }}">{{button_news}}</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                {{ /posts }}
+
+                {{ paginate }}
+                    <a href="{{ prev_page }}">⬅ Previous</a>
+
+                    {{ current_page }} of {{ total_pages }} pages
+                    (There are {{ total_items }} posts)
+
+                    <a href="{{ next_page }}">Next ➡</a>
+                {{ /paginate }}
+
+            {{ /collection:collection-news }}
+        </div>
+    </div>
+</section>

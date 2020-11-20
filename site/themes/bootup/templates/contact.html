@@ -1,0 +1,76 @@
+<style>
+    .badge {
+        font-size: 0.875rem;
+        line-height: 1.0625rem;
+        padding: .25rem .5rem;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        border-radius: 3px;
+    }
+    .badge-danger {
+        color: #fff;
+        background-color: #f3333c;
+    }
+    #map {
+        height: 100%;
+        position: unset !important;
+        max-width: 900px;
+        margin-bottom: 20px;
+        top: 100px;
+    }
+
+</style>
+
+<header class="header_menu">
+    <div class="header_bg_menu"></div>
+</header>
+<section>
+    <div class="container">
+        <div class="text-center">
+            <h2>Find The Hospital</h2>
+            <h5>Below is information about Hospital</h5>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="map_wrapper">
+                    <div id="map_canvas" class="mapping"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="section-content">
+            <div class="row">
+                <div class="col-lg-5">
+                    <h5 class="subtitle" style="color: #0c84b4;">{{ title_page }}</h5>
+                    <h2 class="title">{{ subtitle }}</h2>
+                    <p class="content">{{ content }}</p>
+                    <span class="badge badge-danger">Coronavirus Helpline</span>
+                    <h4> {{ number }} </h4>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card-content">
+                        <h2>Get in Touch</h2>
+                        <form>
+                            <div class="form-group">
+                                <input class="form-control form-control-lg" type="text" placeholder="Full Name">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control form-control-lg" type="text" placeholder="Address">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control form-control-lg" type="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                              <textarea class="form-control form-control-lg" id="message" placeholder="Message" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary mb-2">Submit <i class='fa fa-paper-plane' aria-hidden="true"></i></button>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

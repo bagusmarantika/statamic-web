@@ -1,0 +1,98 @@
+sections:
+  main:
+    display: Main
+    fields:
+      title_page:
+        type: text
+        display: 'Title Page'
+      subtitle_page:
+        type: text
+        display: 'Subtitle Page'
+      button1:
+        type: text
+        display: Button1
+      button2:
+        type: text
+        display: Button2
+      image_person_1:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: 'Image Person 1'
+      image_person_2:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: 'Image Person 2'
+      image_person_3:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: 'Image Person 3'
+  tabel:
+    display: Tabel
+    fields:
+      title_section_table:
+        type: text
+        display: 'Title Section Table'
+      subtitle_section_table:
+        type: text
+        display: 'Subtitle Section Table'
+      title_table_1:
+        type: text
+        display: 'Title Table 1'
+        width: 25
+      title_table_2:
+        display: 'Title Table 2'
+        type: text
+        localizable: true
+        width: 25
+      title_table_3:
+        type: text
+        display: 'Title Table 3'
+        width: 25
+      title_table_4:
+        type: text
+        display: 'Title Table 4'
+        width: 25
+      title_table_5:
+        type: text
+        display: 'Title Table 5'
+        width: 25
+  article:
+    display: Article
+    fields:
+      title_section_article:
+        type: text
+        display: 'Title Section Article'
+      subtitle_section_article:
+        type: text
+        display: 'Subtitle Section Article'
+      article_home:
+        sets:
+          list_article_home:
+            display: 'List Article Home'
+            fields:
+              title_article:
+                type: text
+                display: 'Title Article'
+              subtitle_article:
+                type: text
+                display: 'Subtitle Article'
+              summary_article:
+                restrict_assets: false
+                type: redactor
+                display: 'Summary Article'
+              image_article:
+                container: main
+                folder: /
+                restrict: false
+                type: assets
+                display: 'Image Article'
+        type: replicator
+        display: 'Article Home'
+taxonomies: true
+title: 'Home Template'

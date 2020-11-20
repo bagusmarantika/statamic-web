@@ -1,0 +1,33 @@
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        display: Title
+        type: text
+        localizable: true
+      copyright:
+        type: text
+        display: Copyright
+      owner:
+        type: text
+        display: Owner
+      about:
+        restrict_assets: false
+        type: redactor
+        display: About
+      social_media_list:
+        sets:
+          list_item:
+            display: list_item
+            fields:
+              name:
+                type: text
+                display: Name
+              link:
+                type: text
+                display: Link
+        type: replicator
+        display: 'Social Media List'
+taxonomies: true
+title: Footer

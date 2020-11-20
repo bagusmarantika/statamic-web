@@ -1,0 +1,249 @@
+<style>
+    .header {
+        padding-bottom: 100px;
+    }
+    .header_bg{
+        position: absolute;
+        top: 0px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 700px;
+        background-image: linear-gradient(#0c84b4, #64b9d9);
+        transform: skewY(-6deg);
+        transform-origin: top left;
+        z-index: 0;
+    }
+    
+    section{
+        padding: 25px 0;
+        overflow-x: hidden;
+        position: relative;
+        top:320px;
+    }
+
+    .content-header{
+        position: absolute;
+        top:230px;
+    }
+    
+    .img-1{
+        max-width: 600px;
+        height: 500px;
+        object-fit: contain; 
+        position: absolute;
+        top: -180px;
+    }
+
+    .img-article {
+        max-width: 500px;
+        max-height: 400px;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+
+    .thead-blue{
+        background-color: #0c84b4;
+        border-color: #0c84b4;
+        color: white;
+        cursor:pointer;
+    }
+
+    .title-section{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .content-section{
+        margin-top: 50px;
+    }
+
+    .blog .carousel-indicators {
+	left: 0;
+	top: auto;
+    bottom: -40px;
+
+    }
+</style>
+
+<header class="header">
+    <div class="header_bg"></div>
+    <div class="container">
+        <div class="content-header">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="text-block" style="color: white;">
+                        <h2 class="subtitle">{{ title_page }}</h2>
+                        <h5 class="title">{{ subtitle_page }}</h5>
+                        <a href="{{ current_url }}/#pantau" style="color: white;">{{ button1 }}</a> | <button class="btn btn-outline-light">{{button2}}</button>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        {{ assets:image_person_1}}
+                            <img class="img-1" src="{{ url }}" alt="">
+                        {{ /assets:image_person_1}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id=pantau>
+    <div class="container">
+        <div class="table-section card-content">
+           
+            <div class="title-section">
+                <div class="text-center">
+                    <h2>{{title_section_table}}</h2>
+                </div>
+                <div class="text-center">
+                    <h5>{{subtitle_section_table}}</h5>
+                </div>
+            </div>
+            <!-- <table id="table-data" class="table table-hover content-section">
+                <thead class="thead-blue">
+                  <tr>
+                    <th scope="col" :@click="sort('index')">{{title_table_1}}</th>
+                    <th scope="col" :@click="sort('key')">{{title_table_2}}</th>
+                    <th scope="col" :@click="sort('jumlah_sembuh')">{{title_table_3}}</th>
+                    <th scope="col" :@click="sort('jumlah_kasus')">{{title_table_4}}</th>
+                    <th scope="col" :@click="sort('jumlah_meninggal')">{{title_table_5}}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(res,index) in results">
+                    <th scope="row" v-html="index+1"></th>
+                    <td v-html="res.key"></td>
+                    <td v-html="res.jumlah_sembuh"></td>
+                    <td v-html="res.jumlah_kasus"></td>
+                    <td v-html="res.jumlah_meninggal"></td>
+                  </tr>
+                </tbody>
+            </table> -->
+            <table id="table-dataa" class="display table table-hover content-section" width="100%">
+                <thead class="thead-blue">
+                    <tr>
+                        <th>{{title_table_1}}</th>
+                        <th>{{title_table_2}}</th>
+                        <th>{{title_table_3}}</th>
+                        <th>{{title_table_4}}</th>
+                        <th>{{title_table_5}}</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>{{title_table_1}}</th>
+                        <th>{{title_table_2}}</th>
+                        <th>{{title_table_3}}</th>
+                        <th>{{title_table_4}}</th>
+                        <th>{{title_table_5}}</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="article-section">
+            <div class="title-section">
+                <div class="text-center">
+                    <h2>{{ title_section_article }}</h2>
+                </div>
+                <div class="text-center">
+                    <h5>{{ subtitle_section_article }}</h5>
+                </div>
+            </div>
+            {{ article_home }}
+            <div class="row content-section d-flex flex-{{ switch between='row|row-reverse' }}">
+                <div class="col-lg-6">
+                    <div class="text-block text-{{ switch between='left|right' }}">
+                        <h5 class="title" style="color:#0c84b4;">{{ title_article }}</h5>
+                        <h2 class="subtitle">{{ subtitle_article }}</h2>
+                        <p class="content">{{ summary_article }}</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    {{ assets:image_article }}
+                        <img class="img-article" src="{{ url }}" alt="article_image">
+                    {{ /assets:image_article }}
+                </div>
+            </div>
+            {{ /article_home }}
+        </div>
+    </div>
+</section>
+
+<section class="carousel slide" data-ride="carousel" id="postsCarousel">
+<div class="container">
+    <div class="card-section">
+        <div class="title-section">
+            <div class="text-center">
+                <h2>News</h2>
+            </div>
+            <div class="text-center">
+                <h5>Latest news about Coronavirus Covid-19</h5>
+            </div>
+        </div>
+        <div class="container p-t-0 m-t-2 carousel-inner">
+            <div class="row row-equal carousel-item active m-t-0">
+                {{collection from="collection-news" limit="3"}}
+                    <div class="col-sm-10 col-md-8 col-lg-4">
+                        <div class="box-news">
+                            <div class="box-news-line">
+                                {{if thumbnail_news }}
+                                    {{ assets:thumbnail_news }}
+                                        <img src="{{url}}" alt="..." width="100%">
+                                    {{ /assets:thumbnail_news }}
+                                {{else}}
+                                    <img src="https://dummyimage.com/350x200/aaaaaa/0c84b4" alt=".." width="100%">
+                                {{/if}}
+                            </div>
+                            <div class="box-news-content">
+                                <h4 class="title">{{ title }}</h4>
+                                <p>{{ content_news | truncate:159:... }}</p>
+                                <div class="button button-blue">
+                                    <a href="{{ url }}">{{button_news}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{/collection}}
+            </div>
+            <div class="row row-equal carousel-item m-t-0">
+                {{collection from="collection-news" limit="3" offset="3"}}
+                    <div class="col-sm-10 col-md-8 col-lg-4">
+                        <div class="box-news">
+                            <div class="box-news-line">
+                                {{if thumbnail_news }}
+                                    {{ assets:thumbnail_news }}
+                                        <img src="{{url}}" alt="..." width="100%">
+                                    {{ /assets:thumbnail_news }}
+                                {{else}}
+                                    <img src="https://dummyimage.com/350x200/aaaaaa/0c84b4" alt=".." width="100%">
+                                {{/if}}
+                            </div>
+                            <div class="box-news-content">
+                                <h4 class="title">{{ title }}</h4>
+                                <p>{{ content_news | truncate:159:... }}</p>
+                                <div class="button button-blue">
+                                    <a href="{{ url }}">{{button_news}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{/collection}}
+            </div>
+        </div>
+        <div class="text-center">
+           
+                <a class="btn btn-outline-secondary prev" href="" title="previous"><i class="fa fa-lg fa-chevron-left"></i></a>
+                <a class="btn btn-outline-secondary next" href="" title="next"><i class="fa fa-lg fa-chevron-right"></i></a>
+        </div>
+    </div>
+</div>
+</section>

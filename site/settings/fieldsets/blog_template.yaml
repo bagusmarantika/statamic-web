@@ -1,0 +1,23 @@
+sections:
+  main:
+    display: Main
+    fields:
+      blog_title:
+        type: text
+        display: 'Blog Title'
+      blog_content:
+        restrict_assets: false
+        type: redactor
+        display: 'Blog Content'
+      blog_summary:
+        restrict_assets: false
+        type: redactor
+        display: 'Blog Summary'
+      blog_image:
+        container: main
+        folder: /
+        restrict: false
+        type: assets
+        display: 'Blog Image'
+taxonomies: true
+title: 'Blog Template'

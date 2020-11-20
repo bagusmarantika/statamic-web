@@ -1,0 +1,25 @@
+title: 'Footer Content'
+copyright: 'All right reserved.'
+owner: 'Bagus Marantika'
+about: |
+  <p>Hallo everyone, this is my portofolio website about Coronavirus. This website contains information that I got from several sources from the internet. It is possible that the information on this website is not always updated, so I suggest that you keep on monitoring the website or other sources to get more valid and up to date information. Thank you and Stay healthy.
+  </p>
+social_media_list:
+  -
+    type: list_item
+    name: twitter
+    link: 'https://twitter.com/'
+  -
+    type: list_item
+    name: facebook
+    link: 'https://facebook.com/'
+  -
+    type: list_item
+    name: youtube
+    link: 'https://youtube.com/'
+  -
+    type: list_item
+    name: instagram
+    link: 'https://instagram.com/'
+fieldset: footer
+id: e6d8670e-54a6-46d6-b7e5-febf3c223a07

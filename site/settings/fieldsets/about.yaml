@@ -1,0 +1,40 @@
+sections:
+  main:
+    display: Main
+    fields:
+      title_about:
+        type: text
+        display: 'Title About'
+      title_content:
+        type: text
+        display: 'Title Content'
+      content_about1:
+        restrict_assets: false
+        type: redactor
+        display: 'Content About1'
+      content_about2:
+        restrict_assets: false
+        type: redactor
+        display: 'Content About2'
+  accordion:
+    display: Accordion
+    fields:
+      title_accordion:
+        type: text
+        display: 'Title Accordion'
+      list_accordion:
+        sets:
+          item_accordion:
+            display: 'Item Accordion'
+            fields:
+              title_item:
+                type: text
+                display: 'Title Item'
+              content_item:
+                restrict_assets: false
+                type: redactor
+                display: 'Content Item'
+        type: replicator
+        display: 'List Accordion'
+taxonomies: true
+title: About

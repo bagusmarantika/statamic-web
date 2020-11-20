@@ -1,0 +1,18 @@
+<div class="box-news">
+    <div class="box-news-line">
+        {{if img-news }}
+            {{ assets:img-news }}
+                <img src="{{url}}" alt=".." width="100%">
+            {{ /assets:img-news }}
+        {{else}}
+            <img src="https://dummyimage.com/350x200/aaaaaa/0c84b4" alt=".." width="100%">
+        {{/if}}
+    </div>
+    <div class="box-news-content">
+        <h4 class="title">{{ title-news }}</h4>
+        <p>{{ content-news | truncate:159:... }}</p>
+        <div class="button button-blue">
+            <span>Read More</span>
+        </div>
+    </div>
+</div>

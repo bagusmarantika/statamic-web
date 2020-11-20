@@ -1,0 +1,16 @@
+.header_bg_menu{
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 95px;
+    background-image: linear-gradient(#0c84b4, #64b9d9);
+    /* transform: skewY(-1deg); */
+    transform-origin: top left;
+    z-index: 0;
+}
+.header_menu {
+    padding-bottom: 25px;
+}
