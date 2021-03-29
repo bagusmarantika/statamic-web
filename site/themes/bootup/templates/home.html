@@ -23,6 +23,10 @@
         top:320px;
     }
 
+    #pantau {
+        top: 320px;
+    }
+
     .content-header{
         position: absolute;
         top:230px;
@@ -63,7 +67,18 @@
 	left: 0;
 	top: auto;
     bottom: -40px;
+    }
 
+    .unset-overflow {
+        overflow: unset;
+    }
+    footer {
+        top:420px;
+        margin-top: unset !important;
+    }
+
+    .footer {
+        margin-top: unset !important;
     }
 </style>
 
@@ -189,7 +204,7 @@
                 <h5>Latest news about Coronavirus Covid-19</h5>
             </div>
         </div>
-        <div class="container p-t-0 m-t-2 carousel-inner">
+        <div class="container p-t-0 m-t-2 carousel-inner unset-overflow">
             <div class="row row-equal carousel-item active m-t-0">
                 {{collection from="collection-news" limit="3"}}
                     <div class="col-sm-10 col-md-8 col-lg-4">
@@ -207,7 +222,7 @@
                                 <h4 class="title">{{ title }}</h4>
                                 <p>{{ content_news | truncate:159:... }}</p>
                                 <div class="button button-blue">
-                                    <a href="{{ url }}">{{button_news}}</a>
+                                    <a style="color: white;" href="{{ url }}">{{button_news}}</a>
                                 </div>
                             </div>
                         </div>
@@ -231,7 +246,7 @@
                                 <h4 class="title">{{ title }}</h4>
                                 <p>{{ content_news | truncate:159:... }}</p>
                                 <div class="button button-blue">
-                                    <a href="{{ url }}">{{button_news}}</a>
+                                    <a style="color: white" href="{{ url }}">{{button_news}}</a>
                                 </div>
                             </div>
                         </div>
@@ -239,8 +254,7 @@
                 {{/collection}}
             </div>
         </div>
-        <div class="text-center">
-           
+        <div class="mt-5 text-center"> 
                 <a class="btn btn-outline-secondary prev" href="" title="previous"><i class="fa fa-lg fa-chevron-left"></i></a>
                 <a class="btn btn-outline-secondary next" href="" title="next"><i class="fa fa-lg fa-chevron-right"></i></a>
         </div>

@@ -4,7 +4,7 @@
  * 
  * @author Michiel Zoer <studio@vlijmscherp.com>
  * @version 1.0.0
- * Copyright 2020. MIT licensed.
+ * Copyright 2021. MIT licensed.
  */
 (function($) {
     "use strict";
@@ -20,7 +20,7 @@
  * 
  * @author Michiel Zoer <studio@vlijmscherp.com>
  * @version 1.0.0
- * Copyright 2020. MIT licensed.
+ * Copyright 2021. MIT licensed.
  */
 // Use Vuejs to fetch the api
 // const vm = new Vue({
@@ -112,7 +112,7 @@ function show(data) {
  * 
  * @author Michiel Zoer <studio@vlijmscherp.com>
  * @version 1.0.0
- * Copyright 2020. MIT licensed.
+ * Copyright 2021. MIT licensed.
  */
 // api from Gugus Tugas Percepatan Penanganan COVID-19 Republik Indonesia
 // source -> https://bnpb-inacovid19.hub.arcgis.com/datasets/rs-rujukan-update-may-2020/geoservice
@@ -233,7 +233,7 @@ function initialize() {
  * 
  * @author Michiel Zoer <studio@vlijmscherp.com>
  * @version 1.0.0
- * Copyright 2020. MIT licensed.
+ * Copyright 2021. MIT licensed.
  */
 $(function() {
     // Handler for .ready() called.
@@ -244,7 +244,7 @@ $(function() {
  * 
  * @author Michiel Zoer <studio@vlijmscherp.com>
  * @version 1.0.0
- * Copyright 2020. MIT licensed.
+ * Copyright 2021. MIT licensed.
  */
 /*!
   * Bootstrap v4.5.0 (https://getbootstrap.com/)

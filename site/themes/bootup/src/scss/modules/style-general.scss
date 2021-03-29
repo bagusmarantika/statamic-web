@@ -14,3 +14,13 @@
 .header_menu {
     padding-bottom: 25px;
 }
+
+.page-item.active .page-link {
+    background-color: #0c84b4 !important;
+    border-color: #0c84b4 !important;
+    color: #fff !important;
+}
+
+.page-link {
+    color: #0c84b4 !important;
+}
